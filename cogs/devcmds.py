@@ -82,7 +82,7 @@ class DevCmds(commands.Cog):
         else:
             await ctx.send(f'{ctx.author.mention}, ты кто что-бы использовать евал? Вот именно никто.')
 
-    @commands.command(name='offline', aliases=['off'])
+    @commands.command(name='off')
     async def off(self, ctx):
         if self.collection.users.find_one({"id": ctx.author.id})["dev"] is True:
             em = self.client.get_emoji(775778315112808449)
@@ -91,7 +91,7 @@ class DevCmds(commands.Cog):
         else:
             await ctx.send(f'{ctx.author.mention}, ты кто что-бы перезапускать бота? Вот именно никто.')
 
-    @commands.command(name='activity', aliases=['activ'])
+    @commands.command(name='activity')
     async def activ(self, ctx, *, arg):
         if self.collection.users.find_one({"id": ctx.author.id})["dev"] is True:
             await self.client.change_presence(status=discord.Status.idle, activity=discord.Game(arg))
