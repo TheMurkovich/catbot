@@ -19,7 +19,7 @@ class ball(commands.Cog):
                      'Да (нет)',
                      'Нет (нет)',
                      'Да (да)',
-                     'Нет (да)')
+                     'Нет (да)', 'kek')
         embedError = discord.Embed(title="Ошибка", description="Не были введены аргемуенты",
                                    colour=discord.Colour.red())
         embedLenError = discord.Embed(title="Ошибка", description="Введите текст меньше 1024 символов",
