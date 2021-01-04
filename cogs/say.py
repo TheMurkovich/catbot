@@ -13,7 +13,6 @@ class Say(commands.Cog):
                 await ctx.send(f"{ctx.author.mention}, что мне сказать?")
             else:
                 await ctx.send(arg)
-                print(f'{ctx.author.id} sended: {arg}')
         else:
             await ctx.send(f"{ctx.author.mention}, у Вас нет прав!")
 
