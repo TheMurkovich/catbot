@@ -20,4 +20,4 @@ class Avatar(commands.Cog):
 
 
 def setup(client):
-    client.add_cog(Avatar(client))x
+    client.add_cog(Avatar(client))
