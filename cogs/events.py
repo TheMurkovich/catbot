@@ -29,7 +29,8 @@ class Events(commands.Cog):
                         "system": member.system, "cash": 0,
                         "bio": "Нету биографии",
                         "dev": False,
-                        "new-year2020": False
+                        "new-year2020": False,
+                        "warns": 0
                         }
                 if self.collection.users.count_documents({"id": member.id}) == 0:
                     self.collection.users.insert(post)
@@ -37,7 +38,7 @@ class Events(commands.Cog):
     @commands.Cog.listener()
     async def on_member_join(self, member):
         post = {"id": member.id, "name": member.name, "discrim": member.discriminator, "bot": member.bot,
-                "system": member.system, "cash": 0, "bio": "Нету биографии", "dev": False, "new-year2020": False}
+                "system": member.system, "cash": 0, "bio": "Нету биографии", "dev": False, "new-year2020": False, "warns": 0}
         if self.collection.users.count_documents({"id": member.id}) == 0:
             self.collection.users.insert(post)
 
