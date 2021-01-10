@@ -59,6 +59,9 @@ class Events(commands.Cog):
                 pass
             else:
                 await message.channel.send("<@&777493287391985725>")
+        if message.channel.id == 777493343835914250:
+            await message.add_reaction("🤣")
+            await message.add_reaction("👎")
 
     @commands.Cog.listener()
     async def on_command_error(self, ctx, error):
