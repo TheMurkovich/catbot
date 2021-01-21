@@ -19,9 +19,9 @@ class DevCmds(commands.Cog):
     def __init__(self, client):
         self.client = client
         self.cluster = MongoClient(
-            "mongodb+srv://TheMurkovich:EMvQ6bqhcAoCOD9S@cherrybot.9k23u.mongodb.net/Cherrydb?retryWrites=true&w=majority")
-        self.db = self.cluster["Cherrydb"]
-        self.collection = self.db["CherryCollection"]
+            "")
+        self.db = self.cluster[""]
+        self.collection = self.db[""]
 
     def insert_returns(self, body):
         # insert return stmt if the last expression is a expression statement

@@ -9,9 +9,9 @@ class Bio(commands.Cog):
     def __init__(self, client):
         self.client = client
         self.cluster = MongoClient(
-            "mongodb+srv://TheMurkovich:EMvQ6bqhcAoCOD9S@cherrybot.9k23u.mongodb.net/Cherrydb?retryWrites=true&w=majority")
-        self.db = self.cluster["Cherrydb"]
-        self.collection = self.db["CherryCollection"]
+            )
+        self.db = self.cluster[""]
+        self.collection = self.db[""]
 
     @commands.command(name="bio")
     async def bio(self, ctx, member: discord.Member = None):

@@ -7,9 +7,9 @@ from pymongo import MongoClient
 from config import settings
 
 cluster = MongoClient(
-    "mongodb+srv://TheMurkovich:EMvQ6bqhcAoCOD9S@cherrybot.9k23u.mongodb.net/Cherrydb?retryWrites=true&w=majority")
-db = cluster["Cherrydb"]
-collection = db["CherryCollection"]
+    "")
+db = cluster[""]
+collection = db[""]
 intents = discord.Intents(messages=True, guild_messages=True, members=True, guilds=True)
 client = commands.Bot(command_prefix=collection.find_one("settings")["prefix"], intents=intents)
 client.remove_command('help')
@@ -55,7 +55,7 @@ async def reload(ctx, extension):
         await ctx.message.add_reaction("⛔")
 
 
-for filename in os.listdir("/bot/CherryBotPython/cogs"):
+for filename in os.listdir(""):
     if filename.endswith(".py"):
         client.load_extension(f"cogs.{filename[:-3]}")
         
